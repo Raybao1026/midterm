@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Card Layout Page</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6fa;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      border: 2px solid #eee;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .description {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 0.5rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      opacity: 0.9;
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+
+    /* Theme Styles */
+    .card.red {
+      border-color: #f8cfdc;
+    }
+    .card.red button {
+      background-color: #f8cfdc;
+      color: #900c3f;
+    }
+    .card.red:hover {
+      border-color: #ff80b3;
+    }
+    .card.red button:hover {
+      background-color: #ff80b3;
+    }
+
+    .card.blue {
+      border-color: #d0d8f9;
+    }
+    .card.blue button {
+      background-color: #d0d8f9;
+      color: #2b3a67;
+    }
+    .card.blue:hover {
+      border-color: #acc3f4;
+    }
+    .card.blue button:hover {
+      background-color: #acc3f4;
+    }
+
+    .card.green {
+      border-color: #d5f6d4;
+    }
+    .card.green button {
+      background-color: #d5f6d4;
+      color: #225522;
+    }
+    .card.green:hover {
+      border-color: #a8e4a1;
+    }
+    .card.green button:hover {
+      background-color: #a8e4a1;
+    }
+
+    .card.yellow {
+      border-color: #fff4cb;
+    }
+    .card.yellow button {
+      background-color: #fff4cb;
+      color: #aa7b00;
+    }
+    .card.yellow:hover {
+      border-color: #f1e077;
+    }
+    .card.yellow button:hover {
+      background-color: #f1e077;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card red">
+      <img src="image/5.webp" class="main-img" alt="Card Image" />
+      <div class="description">
+        也許生存在世間的人們，都只是在等待一種偶遇，一種適時的相遇。
+      </div>
+      <div class="bottom-row">
+        <div class="profile">
+          <img src="image/images.jfif" alt="Profile Icon" />
+          <span>RoRo</span>
+        </div>
+        <button onclick="alert('Signed In!')">Sign In</button>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <img src="image/6.webp" class="main-img" alt="Card Image" />
+      <div class="description">
+        看得開一點，傷得就會少一點，有時我沉默，不是不快樂。
+      </div>
+      <div class="bottom-row">
+        <div class="profile">
+          <img src="image/2.jfif" alt="Profile Icon" />
+          <span>BoBo</span>
+        </div>
+        <button onclick="alert('Signed In!')">Sign In</button>
+      </div>
+    </div>
+
+    <div class="card green">
+      <img src="image/7.jpg" class="main-img" alt="Card Image" />
+      <div class="description">
+        當你無法再擁有時，你唯一能做的就是不要再忘記。
+      </div>
+      <div class="bottom-row">
+        <div class="profile">
+          <img src="image/3.jfif" alt="Profile Icon" />
+          <span>CoCo</span>
+        </div>
+        <button onclick="alert('Signed In!')">Sign In</button>
+      </div>
+    </div>
+
+    <div class="card yellow">
+      <img src="image/8.webp" class="main-img" alt="Card Image" />
+      <div class="description">
+        努力過後才知道，許多事情堅持下去，就走過來了。
+      </div>
+      <div class="bottom-row">
+        <div class="profile">
+          <img src="image/4.jfif" alt="Profile Icon" />
+          <span>DoDo</span>
+        </div>
+        <button onclick="alert('Signed In!')">Sign In</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
